@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 40vh;
+            width: 60vh;
+        }
+        textarea{
+            height: 30vh;
+            width: 200vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="story1">
+        <h1>Elephant and the Rope</h1>
+        <img src="https://cdn.firstcry.com/education/2022/10/05180517/The-Elephant-And-The-Tailor-Story-With-Moral-For-Kids1.jpg">
+        <textarea id="area1">Once upon a time, a man was walking through an elephant camp and noticed that the elephants weren’t kept in cages or held by chains. The only thing stopping them from escaping was a small piece of rope tied to one of their legs. Amazed and curious, he asked a trainer nearby why the elephants didn’t try to break free.
+
+            The trainer replied, “When they’re very young and much smaller, we use the same-sized rope to tie them, and at that age, it’s enough to hold them. As they grow up, they believe they still can’t break away. They think the rope can still hold them, so they never try to break free.”
+            
+            The man was amazed. These powerful animals could easily break free, but because they believed they couldn’t, they were stuck.
+            
+            Moral: No matter how much the world tries to hold you back, always believe in yourself. Don’t let a small obstacle from the past prevent you from reaching your full potential.</textarea>
+    </div>
+    <button onclick="startAudio('area1')">Start</button>
+    <button onclick="stopAudio()">Stop</button>
+    <div class="story2">
+        <h1>The Obstacle in our Path</h1>
+        <img src="https://media.licdn.com/dms/image/C4E12AQFi01q0H2HG8Q/article-cover_image-shrink_600_2000/0/1600515873094?e=2147483647&v=beta&t=j-Kec5eCm8a8yPv652x7yv2U8zGsszjeLRrEhYRh-kw">
+        <textarea id="area2">
+            There once was a very wealthy and curious king. This king had a huge boulder placed in the middle of a road. Then he hid nearby to see if anyone would try to remove the gigantic rock from the road.
+
+The first people to pass by were some of the king’s wealthiest merchants and courtiers. Rather than moving it, they simply walked around it. A few loudly blamed the King for not maintaining the roads. Not one of them tried to move the boulder.
+
+Finally, a peasant came along. His arms were full of vegetables. When he got near the boulder, rather than simply walking around it as the others had, the peasant put down his load and tried to move the stone to the side of the road. It took a lot of effort but he finally succeeded.
+
+The peasant gathered up his load and was ready to go on his way when he say a purse lying in the road where the boulder had been. The peasant opened the purse. The purse was stuffed full of gold coins and a note from the king. The king’s note said the purse’s gold was a reward for moving the boulder from the road.
+
+The king showed the peasant what many of us never understand: every obstacle presents an opportunity to improve our condition.
+        </textarea>
+        <button onclick="startAudio('area2')">Start</button>
+        <button onclick="stopAudio">Stop</button>
+    </div>
+
+    <script>
+        let speech=new SpeechSynthesisUtterance();
+        function startAudio(textareaId){
+            let text=document.getElementById(textareaId).value;
+            speech.text=text;
+            window.speechSynthesis.speak(speech);
+        }
+        function stopAudio(){
+            window.speechSynthesis.cancel();
+        }
+    </script>
+</body>
+</html>

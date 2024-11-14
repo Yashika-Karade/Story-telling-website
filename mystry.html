@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea{
+            height: 50vh;
+            width: 200vh;
+        }
+        img{
+            height: 40vh;
+            width: 60vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="story1">
+        <h1>The Vanishing Necklace</h1>
+        <img src="https://i.etsystatic.com/16677541/r/il/3f1680/2130012562/il_fullxfull.2130012562_sb3a.jpg">
+        <textarea id="area1">It was a cold winter evening, and Sarah was preparing for her family’s annual holiday dinner. She wore her grandmother’s precious sapphire necklace—a family heirloom passed down through generations. The necklace sparkled under the dim lights, a perfect blend of history and elegance.
+
+            As the guests arrived, laughter and chatter filled the room. But in the middle of the celebration, Sarah noticed something horrifying—the necklace was gone! She panicked, scanning the room. It had been on her neck just moments ago.
+            
+            She discreetly told her brother, who helped her search every corner of the house. They retraced her steps, checked under tables, and even questioned a few guests, but the necklace was nowhere to be found. The party continued, but Sarah couldn’t relax. Who could have taken it?
+            
+            Finally, her little niece, Emma, tugged at her sleeve. “Auntie, are you looking for something?” she asked innocently.
+            
+            Sarah nodded, not wanting to worry her. “Just a special necklace, sweetheart.”
+            
+            Emma giggled and opened her tiny purse, pulling out the necklace. “I found it on the floor and wanted to surprise you with it later!”
+            
+            Relieved and amused, Sarah hugged Emma. The mystery was solved, and Sarah learned a valuable lesson about keeping an eye on her jewelry—and the curious kids in the family!
+            
+            Moral: Sometimes, the answer to a mystery is closer than you think. Never overlook the smallest details, especially the little helpers around you!
+        </textarea>
+        <button onclick="startAudio('area1')">Start</button>
+        <button onclick="stopAudio()">Stop</button>
+    </div>
+    
+    <div class="story2">
+        <h1>The Locked Room</h1>
+        <img src="https://thumbs.dreamstime.com/b/escape-room-concept-vintage-gold-key-locked-padlock-web-banner-rusty-metal-background-188329407.jpg">
+        <textarea id="area2">
+
+            Detective Ellis was called to a strange case. A famous writer, Mr. Thompson, had been found unconscious in his study, and the door had been locked from the inside. No one else was in the house, and all the windows were tightly shut. The police couldn't figure out how anyone could have entered or left.
+
+When Detective Ellis arrived, he examined the room carefully. Books were scattered on the floor, and a single note was on the desk. It read, “The truth is in the air.” Detective Ellis noticed that the room was unusually warm.
+
+After a closer look, he spotted a faint trail of ashes near the fireplace, which hadn't been used in months. Suspicious, he checked the flue above the fireplace and found it slightly ajar.
+
+The detective realized the answer: the intruder had slipped in and out through the chimney. They’d left the cryptic note to confuse anyone investigating the scene. The warmth in the room? It was left over from the intruder's flashlight or possibly a small heat source to make climbing down safer.
+
+Detective Ellis sealed the room again and notified the authorities. Later, they found fingerprints in the flue confirming his suspicion. The mystery was solved—the intruder had gone up in the chimney, as quiet as smoke.
+
+Moral: Even the smallest details can lead to the truth. Sometimes, you just need to look a little higher (or closer) than expected.
+        </textarea>
+        <button onclick="startAudio('area2')">Start</button>
+        <button onclick="stopAudio()">Stop</button>
+    </div>
+
+    
+    <script>
+        let speech=new SpeechSynthesisUtterance();
+        function startAudio(textareaId){
+            let text=document.getElementById(textareaId).value;
+            speech.text=text;
+            window.speechSynthesis.speak(speech);
+        }
+
+        function stopAudio(){
+            window.speechSynthesis.cancel();
+        }
+    </script>
+</body>
+</html>

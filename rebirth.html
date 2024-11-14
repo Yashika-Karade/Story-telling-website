@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 50vh;
+            width: 50vh;
+        }
+        textarea{
+            height: 50vh;
+            width: 200vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="story1">
+        <h1>The Phoenix Tree</h1>
+        <img src="https://www.shutterstock.com/image-photo/beautiful-orange-delonix-regia-royal-260nw-2447993343.jpg">
+        <textarea id="area1">In a quiet village stood an old, withered tree that the villagers called the Phoenix Tree. Once grand and lush, it had been struck by lightning years ago and was now a barren, twisted skeleton of its former self. The villagers whispered that it was cursed, but Mira, a young girl with a heart full of wonder, refused to believe it. She visited the tree every day, talking to it, believing it still held life within.
+
+            One evening, Mira planted a handful of seeds around the tree’s roots. “You’ll grow strong again, I know it,” she whispered. Every day, she brought water, tending to the soil and clearing away the dry leaves. Seasons passed, but nothing grew. The villagers laughed at her efforts, telling her it was pointless. But Mira held on to hope.
+            
+            One spring morning, as the sun rose, Mira noticed a tiny green sprout emerging from the earth beside the Phoenix Tree. She gasped, her heart soaring. Over the next few weeks, more and more leaves began to grow, not only from the ground but from the branches of the old tree itself. Against all odds, the Phoenix Tree was reborn, its branches sprouting vibrant leaves and blossoms. Soon, it stood even grander than before, a symbol of resilience and new beginnings.
+            
+            The villagers were in awe, calling it a miracle. But Mira simply smiled, knowing that sometimes, even the most withered souls can find new life with a little love and patience.
+            
+            Moral: No matter how hopeless things may seem, there is always a chance for rebirth and renewal. With care and perseverance, even the most broken things can come alive again.</textarea>
+            <button onclick="startaudio('area1')">Start</button>
+            <button onclick="stopAudio()">Stop</button>
+    </div>
+    <div class="story2">
+        <h1>The Lost Artist</h1>
+        <img src="https://m.media-amazon.com/images/I/91x7CGdRPkL._AC_UF1000,1000_QL80_.jpg">
+        <textarea id="area2">Ethan was once a celebrated artist, his paintings known for their vibrant colors and life. But after a personal tragedy, his passion faded. He packed away his brushes and paints, closed his studio, and moved to a quiet town, hoping to escape the memories that haunted him.
+
+            Years went by, and Ethan became a shadow of his former self. One evening, he wandered into a small park, where he noticed a mural half-covered with ivy and dirt. Beneath the grime, faint streaks of color were visible. Something about it called to him. Without thinking, he wiped away some dirt with his hand, revealing a breathtaking scene of a golden sunrise over mountains.
+            
+            That night, Ethan felt something he hadn’t felt in years—a spark. The next day, he returned with a rag, gently cleaning the mural to reveal more of the forgotten masterpiece. As he worked, he remembered his own passion for painting, how he used to lose himself in colors and brushstrokes. By the time he’d cleaned the mural entirely, he felt alive again.
+            
+            Inspired, Ethan returned to his old studio, dusted off his supplies, and began painting once more. Slowly, his heart began to heal, and he realized that while he couldn’t change the past, he could still create beauty in the present.
+            
+            Moral: Sometimes, the path to healing and rebirth comes unexpectedly. Rediscovering old passions can help us find our way back to ourselves.</textarea>
+
+        <button onclick="startaudio('area2')">Start</button>
+        <button onclick="stopAudio()">Stop</button>
+    </div>
+    <script>
+        let speech=new SpeechSynthesisUtterance();
+        function startaudio(textareaId){
+
+            let text=document.getElementById(textareaId).value;
+            speech.text=text;
+            window.speechSynthesis.speak(speech);
+        }
+
+        function stopAudio(){
+            window.speechSynthesis.cancel();
+        }
+
+        
+    </script>
+</body>
+</html>

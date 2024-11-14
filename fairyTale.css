@@ -1,0 +1,56 @@
+.imag img{
+    height: 100%;
+    width: 120%;
+}
+.gubban{
+    display: flex;
+}
+.story1{
+    height: 100vh;
+}
+.gubban textarea{
+    height: 80vh;
+    width: 500vh;
+    background-color: aquamarine;
+}
+.story1 h3{
+    font-size: 30px;
+    text-align: center;
+    color: brown;
+}
+.imag{
+    
+    flex-direction: column;
+}
+image button{
+    height: 20px;
+    width: 20px;
+}
+.story2 textarea{
+    height: 80vh;
+    width: 200vh;
+}
+.story2 img{
+    height: 40vh;
+    width: 60vh;
+}
+.story3 textarea{
+    height: 80vh;
+    width: 200vh;
+}
+.story3 img{
+    height: 40vh;
+    width: 60vh;
+}
+textarea{
+    height: 80vh;
+    width: 200vh; 
+}
+img{
+    height: 40vh;
+    width: 60vh;
+}
+.story5 textarea{
+    height: 50vh;
+    width: 200vh;
+}
